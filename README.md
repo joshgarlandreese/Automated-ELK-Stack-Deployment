@@ -33,10 +33,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name      | Function | IP Address | Operating System |
 |-----------|----------|------------|------------------|
-| TODO: Jump Box  | Gateway  | 10.0.0.1   | Linux            |
-| TODO: DVWA-VM1  |          | 10.0.0.8   |                  |
-| TODO: DVWA-VM2  |          | 10.0.0.10  |                  |
-| TODO: ELK-Server|          | 10.0.0.12  |                  |
+| Jump Box  | Gateway  | 10.0.0.1   | Linux            |
+| DVWA-VM1  |          | 10.0.0.8   |                  |
+| DVWA-VM2  |          | 10.0.0.10  |                  |
+| ELK-Server|          | 10.0.0.12  |                  |
 
 ### Access Policies
 

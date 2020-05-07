@@ -31,19 +31,19 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name      | Function | IP Address | Operating System |
-|-----------|----------|------------|------------------|
-| Jump Box  | Gateway  | 10.0.0.1   | Linux            |
-| DVWA-VM1  |          | 10.0.0.8   |                  |
-| DVWA-VM2  |          | 10.0.0.10  |                  |
-| ELK-Server|          | 10.0.0.12  |                  |
+| Name      | Function           | IP Address | Operating System |
+|-----------|--------------------|------------|------------------|
+| Jump Box  | Gateway            | 10.0.0.5   | Linux            |
+| DVWA-VM1  | Pen Testing        | 10.0.0.8   | Linux            |
+| DVWA-VM2  | Pen Testing        | 10.0.0.10  | Linux            |
+| ELK-Server| Analytics Platform | 10.0.0.12  | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
@@ -52,14 +52,14 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
+| Jump Box | Yes                 | 10.0.0.8 10.0.0.10   |
 |          |                     |                      |
 |          |                     |                      |
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows for setup in minutes using OpenSSH without installing anything on the servers.
+
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._

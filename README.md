@@ -15,13 +15,14 @@ Beats in Use
 Machines Being Monitored
 How to Use the Ansible Build
 
-  - ansible.cfg
+![TODO: Update the path with the name of your diagram]  
+- https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/ansible.cfg
   
   ### Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly secure, in addition to restricting access to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.

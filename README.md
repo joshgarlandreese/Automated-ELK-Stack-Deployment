@@ -15,7 +15,7 @@ Beats in Use
 Machines Being Monitored
 How to Use the Ansible Build
 
-![TODO: Update the path with the name of your diagram]  
+
 - https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/ansible.cfg
   
   ### Description of the Topology
@@ -23,11 +23,12 @@ How to Use the Ansible Build
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly secure, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- Load balancers add resiliency by rerouting live traffic from one server to another if a server falls prey to a DDoS attack or otherwise becomes unavailable.
+- A Jump Box Provisioner is also important as it prevents Azure VMs from being exposed via a public IP Address.  This allows us to do monitoring and logging on a single box.  We can also restrict the IP addresses able to communicate with the Jump Box, as we've done here.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
+- Filebeat collects data about the file system.
+- Metricbeat collects machine metrics such as uptime.
 
 The configuration details of each machine may be found below.
 
@@ -44,16 +45,15 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump Box Provisioner machine can accept connections from the Internet. 
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by my home IP address.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 72.182.17.150        |
-|          |                     |                      |
-|          |                     |                      |
+| DVWA-VM1 | No                  | 10.0.0.5             |
+| DVWA-VM2 | No                  | 10.0.0.5             |
 
 ### Elk Configuration
 

@@ -14,9 +14,6 @@ ELK Configuration
 Beats in Use
 Machines Being Monitored
 How to Use the Ansible Build
-
-
-- https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/ansible.cfg
   
   ### Description of the Topology
 
@@ -73,13 +70,16 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- DVWA-VM1 10.0.0.8
+- DVWA-VM2 10.0.0.10
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Metricbeat 
+- Filebeat 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat will be used to collect log files from very specific files such as Apache, Azure tools and web servers.
+- Metericbeat will be used to monitor VM stats, per CPU core stats, per filesystem stats, memory stats and network stats.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 

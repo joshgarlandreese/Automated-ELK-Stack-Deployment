@@ -125,7 +125,7 @@ SSH into the control node and follow the steps below:
 
 [Metricbeat Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/metricbeat-playbook.yml)
 
-- Copy the filebeat-configuration.yml file to /etc/ansible/files.
+- Copy the metricbeat-configuration.yml file to /etc/ansible/files.
 
 [Metricbeat Configuration](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/metricbeat-configuration.yml)
 

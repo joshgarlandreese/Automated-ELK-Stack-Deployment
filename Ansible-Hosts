@@ -12,26 +12,13 @@
 # List the IP Addresses of your webservers
 # You should have at least 2 IP addresses
 [webservers]
-10.0.0.10
-10.0.0.11
-10.0.0.9
+10.0.0.5
 10.0.0.8
+10.0.0.10
+
 
 # List the IP address of your ELK server
 # There should only be one IP address
 [elkservers]
 10.0.0.12
-
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
 

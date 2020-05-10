@@ -102,7 +102,9 @@ SSH into the control node and follow the steps below:
 - Choose System Logs.
 
 - Copy the filebeat-playbook.yml file to /etc/ansible/roles
+
 [Filebeat Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/filebeat-playbook.yml)
+
 - Copy the filebeat-configuration.yml file to /etc/ansible/files.
 
 [Filebeat Configuration](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/filebeat-configuration.yml)

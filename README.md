@@ -120,12 +120,15 @@ SSH into the control node and follow the steps below:
 ![TODO: Update the path with the name of your screenshot of docker ps output](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/data_success.png)
 
 - Copy the metricbeat-configuration.yml file to /etc/ansible/files.
+
 [Metricbeat Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/metricbeat-playbook.yml)
+
 - Copy the filebeat-configuration.yml file to /etc/ansible/files.
 
 [Metricbeat Configuration](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/metricbeat-configuration.yml)
+
 - Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
 - Scroll to line #1806 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
 
--- Run ansible-playbook metricbeat-configuration.yml
+- Run ansible-playbook metricbeat-configuration.yml
 - To verify that your play works as expected, on the Metricbeat installation page in the ELK server GUI, scroll to Step 5: Module Status and click Check Data.

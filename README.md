@@ -85,13 +85,29 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
+- SSH into the ELK Container ssh ansible@10.0.0.12 for my setup
+- Run docker container list -a to verify that the container is on.
+- If it isn't, run docker start sebp/elk.
+- Exit the ELK Container
+- Navigate to http://72.182.17.150:5601 from your web browser.
+- Open your ELK server homepage
+- Click on Add Log Data.
+- Copy the filebeat
+- Choose System Logs.
+- Click on the DEB tab under Getting Started to view the correct Linux Filebeat installation instructions.
 - Copy the filebeat-configuration.yml file to /etc/ansible/files.
-- Update the filebeat-configuration.yml file to include the IP address of the ELK Server, 10.0.0.12 for the purposes of my setup. 
-- Run the playbook, and navigate to kibana 
+- Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
+- Scroll to line #1806 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
+- Run the playbook with ansible-playbook filebeat-playbook.yml.
+- Next, confirm that the ELK stack was receiving logs. 
+- Navigate back to the Filebeat installation page on the ELK server GUI.
+- Verify that your playbook is completing Steps 1-4.
+- On the same page, scroll to Step 5: Module Status and click Check Data.
+- Scroll to the bottom and click on Verify Incoming Data.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- If the ELK stack was successfully receiving logs, you would have seen:
+![TODO: Update the path with the name of your screenshot of docker ps output](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/data_success.png)
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- Copy the metricbeat-configuration.yml file to /etc/ansible/files.
+- Update the metricbeat-configuration.yml file to include the IP address of the ELK Server, 10.0.0.12 for the purposes of my setup. 
+- Run the playbook

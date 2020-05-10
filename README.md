@@ -8,9 +8,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 [Ansible Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/ansible.cfg)
 
-[Filebeat Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/filebeat-playbook.yml)
+[Ansible Hosts File](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/Ansible-Hosts)
 
-[Filebeat Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/filebeat-playbook.yml)
+[ELK Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/ELK-Playbook.yml)
 
 This document contains the following details:
 

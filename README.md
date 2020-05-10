@@ -92,12 +92,16 @@ SSH into the control node and follow the steps below:
 - Navigate to http://72.182.17.150:5601 from your web browser.
 - Open your ELK server homepage
 - Click on Add Log Data.
-- Copy the filebeat
-- Choose System Logs.
 - Click on the DEB tab under Getting Started to view the correct Linux Filebeat installation instructions.
 - Copy the filebeat-configuration.yml file to /etc/ansible/files.
+[Filebeat Configuration](config_files/filebeat-configuration.yml)
+
+- Choose System Logs.
 - Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
 - Scroll to line #1806 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
+- Copy the filebeat-playbook.yml file to /etc/ansible/roles
+[Filebeat Playbook](config_files/filebeat-playbook.yml)
+
 - Run the playbook with ansible-playbook filebeat-playbook.yml.
 - Next, confirm that the ELK stack was receiving logs. 
 - Navigate back to the Filebeat installation page on the ELK server GUI.

@@ -95,31 +95,37 @@ SSH into the control node and follow the steps below:
 - Run docker container list -a to verify that the container is on.
 - If it isn't, run docker start sebp/elk.
 - Exit the ELK Container
-- Navigate to http://72.182.17.150:5601 from your web browser.
+- Navigate to (Your IP Address):5601 from your web browser.
 - Open your ELK server homepage
 - Click on Add Log Data.
 - Click on the DEB tab under Getting Started to view the correct Linux Filebeat installation instructions.
-- Copy the filebeat-configuration.yml file to /etc/ansible/files.
-[Filebeat Configuration](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/filebeat-configuration.yml)
-
 - Choose System Logs.
-- Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
-- Scroll to line #1806 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
+
 - Copy the filebeat-playbook.yml file to /etc/ansible/roles
 [Filebeat Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/filebeat-playbook.yml)
+- Copy the filebeat-configuration.yml file to /etc/ansible/files.
 
-- Run the playbook with ansible-playbook filebeat-playbook.yml.
+[Filebeat Configuration](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/filebeat-configuration.yml)
+
+- Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
+- Scroll to line #1806 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
+- Run the playbook with ansible-playbook filebeat-configuration.yml.
 - Next, confirm that the ELK stack was receiving logs. 
 - Navigate back to the Filebeat installation page on the ELK server GUI.
 - Verify that your playbook is completing Steps 1-4.
 - On the same page, scroll to Step 5: Module Status and click Check Data.
 - Scroll to the bottom and click on Verify Incoming Data.
-
 - If the ELK stack was successfully receiving logs, you would have seen:
+
 ![TODO: Update the path with the name of your screenshot of docker ps output](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/data_success.png)
 
 - Copy the metricbeat-configuration.yml file to /etc/ansible/files.
+[Metricbeat Playbook](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/metricbeat-playbook.yml)
+- Copy the filebeat-configuration.yml file to /etc/ansible/files.
+
+[Metricbeat Configuration](https://github.com/joshgarlandreese/Project1_UTBootcamp_Azure/blob/master/metricbeat-configuration.yml)
 - Scroll to line #1106 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
 - Scroll to line #1806 and replace the IP address with the IP address of your ELK machine, 10.0.0.12 for the purposes of my setup.
-- Run ansible-playbook metricbeat-configuration.yml
+
+-- Run ansible-playbook metricbeat-configuration.yml
 - To verify that your play works as expected, on the Metricbeat installation page in the ELK server GUI, scroll to Step 5: Module Status and click Check Data.

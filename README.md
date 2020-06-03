@@ -54,7 +54,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 72.182.17.150        |
+| Jump Box | Yes                 | 72.182.xx.xxx        |
 | DVWA-VM1 | No                  | 10.0.0.5             |
 | DVWA-VM2 | No                  | 10.0.0.5             |
 
